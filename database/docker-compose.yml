@@ -1,0 +1,17 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb-compose
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: weixlberg
+      MYSQL_DATABASE: grade_prediction
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin          
+    ports:
+      - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  db:
