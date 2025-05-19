@@ -1,3 +1,4 @@
+DROP DATABASE grade_prediction;
 CREATE DATABASE grade_prediction;
 USE grade_prediction;
 

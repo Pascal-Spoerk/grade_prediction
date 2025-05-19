@@ -9,7 +9,7 @@ students = pd.concat([mat, por], ignore_index=True)
 conn = mariadb.connect(
     user="root",
     password="weixlberg",
-    host="localhost",
+    host="127.0.0.1",
     port=3306,
     database="grade_prediction"
 )

@@ -11,7 +11,9 @@
             "driver": "MariaDB",
             "name": "grade_prediction",
             "database": "grade_prediction",
-            "username": "root"
+            "username": "root",
+            "connectionTimeout": 100,
+            "askForPassword": true
         }
     ]
 }
