@@ -173,3 +173,4 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 backend/machine_learning_model/model.pkl
+grade_prediction.session.sql
