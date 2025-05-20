@@ -55,12 +55,24 @@
 
             <!-- Bildung -->
             <div class="col-md-4">
-                <label for="Medu" class="form-label">Bildung Mutter (0–4)</label>
-                <input type="number" class="form-control" name="Medu" id="Medu" min="0" max="4">
+                <label for="Medu" class="form-label">Bildung Mutter</label>
+                 <select class="form-select" name="Medu" id="Medu">
+                    <option value="0">Keine</option>
+                    <option value="1">Volksschule</option>
+                    <option value="2">Mittelschule</option>
+                    <option value="3">Höhere Schule</option>
+                    <option value="4">Universität</option>
+                </select>
             </div>
             <div class="col-md-4">
-                <label for="Fedu" class="form-label">Bildung Vater (0–4)</label>
-                <input type="number" class="form-control" name="Fedu" id="Fedu" min="0" max="4">
+                <label for="Fedu" class="form-label">Bildung Vater</label>
+                <select class="form-select" name="Fedu" id="Fedu">
+                    <option value="0">Keine</option>
+                    <option value="1">Volksschule</option>
+                    <option value="2">Mittelschule</option>
+                    <option value="3">Höhere Schule</option>
+                    <option value="4">Universität</option>
+                </select>
             </div>
 
             <!-- Berufe -->
@@ -114,8 +126,8 @@
                 <input type="number" class="form-control" name="studytime" id="studytime" min="1" max="4">
             </div>
             <div class="col-md-4">
-                <label for="failures" class="form-label">Misserfolge</label>
-                <input type="number" class="form-control" name="failures" id="failures" min="0" max="4">
+                <label for="failures" class="form-label">Wiederholte Schulstufen (0-3),</label>
+                <input type="number" class="form-control" name="failures" id="failures" min="0" max="3">
             </div>
 
             <!-- Unterstützungen & Aktivitäten -->
@@ -150,7 +162,7 @@
             {% endfor %}
 
             <div class="col-md-4">
-                <label for="absences" class="form-label">Fehlstunden</label>
+                <label for="absences" class="form-label">Fehlstunden (0-93)</label>
                 <input type="number" class="form-control" name="absences" id="absences" min="0" max="93">
             </div>
 
