@@ -118,11 +118,11 @@
 
             <!-- Zeiten und Fehlverhalten -->
             <div class="col-md-4">
-                <label for="traveltime" class="form-label">Reisezeit (1–4)</label>
+                <label for="traveltime" class="form-label">Reisezeit: Sehr wenig bis sehr viel (1 – 4) </label>
                 <input type="number" class="form-control" name="traveltime" id="traveltime" min="1" max="4">
             </div>
             <div class="col-md-4">
-                <label for="studytime" class="form-label">Lernzeit (1–4)</label>
+                <label for="studytime" class="form-label">Lernzeit: Sehr wenig bis sehr viel (1 – 4)</label>
                 <input type="number" class="form-control" name="studytime" id="studytime" min="1" max="4">
             </div>
             <div class="col-md-4">
@@ -149,14 +149,14 @@
             {% endfor %}
 
             <!-- Werte 1–5 -->
-            {% for name, label in [('famrel', 'Familienverhältnis'),
-                                   ('freetime', 'Freizeit'),
-                                   ('goout', 'Ausgehen'),
-                                   ('Dalc', 'Alkohol (Werktags)'),
-                                   ('Walc', 'Alkohol (Wochenende)'),
-                                   ('health', 'Gesundheit')] %}
+            {% for name, label in [('famrel', 'Familienverhältnis: Sehr schlecht bis sehr gut (1 - 5)'),
+                                   ('freetime', 'Freizeit: Sehr wenig bis sehr viel (1 - 5)'),
+                                   ('goout', 'Ausgehen: Sehr wenig bis sehr viel (1 - 5)'),
+                                   ('Dalc', 'Alkoholkonsum (Werktags): Sehr wenig bis sehr viel (1 - 5)'),
+                                   ('Walc', 'Alkoholkonsum (Wochenende): Sehr wenig bis sehr viel (1 - 5)'),
+                                   ('health', 'Gesundheit: Sehr schlecht bis sehr gut (1 - 5)')] %}
             <div class="col-md-4">
-                <label for="{{ name }}" class="form-label">{{ label }} (1–5)</label>
+                <label for="{{ name }}" class="form-label">{{ label }} </label>
                 <input type="number" class="form-control" name="{{ name }}" id="{{ name }}" min="1" max="5">
             </div>
             {% endfor %}
@@ -172,7 +172,12 @@
 
             {% if prediction is not none %}
                 <div class="alert alert-info mt-4 text-center">
-                    <strong>Vorhergesagte Endnote (G3):</strong> {{ prediction }}
+                    <strong>Vorhergesagte Punkte: 0 - 20 Punkte:</strong> {{ prediction }}
+                    <p> 0 - 10 = Note 5</p>
+                    <p>11 - 13 = Note 4</p>
+                    <p>14 - 16 = Note 3</p>
+                    <p>17 - 18 = Note 2</p>
+                    <p>19 - 20 = Note 1</p>
                 </div>
             {% endif %}
         </form>
