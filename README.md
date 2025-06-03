@@ -1,29 +1,26 @@
 # grade_prediction
-# grade_prediction
+
 Begrüßung & Einführung
 
 Hallo zusammen,
 heute stelle ich euch mein Machine Learning Projekt vor, mit dem wir die Endnote von Schülern basierend auf verschiedenen Merkmalen vorhersagen können. Dabei kombiniere ich eine Webanwendung mit einer Datenbank und einem trainierten Machine Learning Modell.
 
-1. Überblick über das Projekt
+## Überblick über das Projekt
 
 Das Projekt besteht aus folgenden Hauptkomponenten:
 
-    Frontend: Ein benutzerfreundliches Webformular, das Schülerdaten abfragt
+- Frontend: Ein benutzerfreundliches Webformular, das Schülerdaten abfragt
+- Backend: Flask-Webserver, der die Daten entgegennimmt, vorverarbeitet und eine Vorhersage mit dem Machine Learning Modell durchführt
+- Datenbank: MariaDB speichert die Trainingsdaten für das Modell
+- Docker: Zur einfachen Bereitstellung der Datenbank und später auch des Backends
 
-    Backend: Flask-Webserver, der die Daten entgegennimmt, vorverarbeitet und eine Vorhersage mit dem Machine Learning Modell durchführt
-
-    Datenbank: MariaDB speichert die Trainingsdaten für das Modell
-
-    Docker: Zur einfachen Bereitstellung der Datenbank und später auch des Backends
-
-2. Frontend
+## Frontend
 
 Das Frontend ist in HTML und Bootstrap, sowie mit Jinja zum Laden der Templates gestaltet, um ein responsives und übersichtliches Formular bereitzustellen. Dort geben Nutzer Attribute wie Alter, Geschlecht, Schulform, sowie unterstützende Faktoren wie Lernzeit oder Alkoholkonsum ein.
 
 Nach dem Absenden sendet das Formular die Daten per POST an das Backend. Falls eine Vorhersage vorliegt, wird diese direkt unter dem Formular angezeigt, inklusive einer Noteninterpretation.
 
-3. Backend
+## Backend
 
 Das Backend basiert auf Flask, einem leichtgewichtigen Python Web-Framework.
 
@@ -35,7 +32,7 @@ Das Backend basiert auf Flask, einem leichtgewichtigen Python Web-Framework.
 
     Das Modell gibt eine Punktzahl für die voraussichtliche Abschlussnote zurück, die gerundet an das Frontend weitergereicht wird.
 
-4. Datenbank
+## Datenbank
 
 Die MariaDB-Datenbank enthält die Trainingsdaten.
 
@@ -45,7 +42,7 @@ Die MariaDB-Datenbank enthält die Trainingsdaten.
 
     Die Verbindung erfolgt über MariaDB-Connector in Python.
 
-5. Machine Learning Pipeline
+## Machine Learning Pipeline
 
     Die Pipeline umfasst eine Vorverarbeitung mit OneHotEncoding für kategorische Merkmale und die Weitergabe an den Random Forest Regressor.
 
@@ -53,7 +50,7 @@ Die MariaDB-Datenbank enthält die Trainingsdaten.
 
     Abschließend wird das trainierte Modell als model.pkl gespeichert und bei Anfragen geladen.
 
-6. Docker Setup
+## Docker Setup
 
     Für eine einfache und reproduzierbare Umgebung läuft die MariaDB Datenbank in einem Docker Container, gesteuert über eine docker-compose.yml.
 
@@ -61,7 +58,7 @@ Die MariaDB-Datenbank enthält die Trainingsdaten.
 
     Das Backend könnte ebenfalls containerisiert werden, um die gesamte Anwendung portabel zu machen.
 
-Zusammenfassung
+## Zusammenfassung
 
     Wir haben eine vollständige Webanwendung gebaut, die Benutzereingaben entgegennimmt und eine Notenvorhersage durch Machine Learning macht.
 
