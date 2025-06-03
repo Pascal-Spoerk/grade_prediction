@@ -19,7 +19,7 @@ Das Projekt besteht aus folgenden Hauptkomponenten:
 
 2. Frontend
 
-Das Frontend ist in HTML und Bootstrap gestaltet, um ein responsives und übersichtliches Formular bereitzustellen. Dort geben Nutzer Attribute wie Alter, Geschlecht, Schulform, sowie unterstützende Faktoren wie Lernzeit oder Alkoholkonsum ein.
+Das Frontend ist in HTML und Bootstrap, sowie mit Jinja zum Laden der Templates gestaltet, um ein responsives und übersichtliches Formular bereitzustellen. Dort geben Nutzer Attribute wie Alter, Geschlecht, Schulform, sowie unterstützende Faktoren wie Lernzeit oder Alkoholkonsum ein.
 
 Nach dem Absenden sendet das Formular die Daten per POST an das Backend. Falls eine Vorhersage vorliegt, wird diese direkt unter dem Formular angezeigt, inklusive einer Noteninterpretation.
 
